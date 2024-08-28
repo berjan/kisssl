@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Ensure the container is up-to-date
+docker-compose build
+
+# Run the SSL tool interactively
+docker-compose run --rm ssl-tool

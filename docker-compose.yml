@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  ssl-tool:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./letsencrypt:/app/letsencrypt
+      - ssl_tool_data:/app/data
+    environment:
+      - EMAIL=berjan@bruens.it
+
+volumes:
+  ssl_tool_data:
